@@ -81,5 +81,42 @@ namespace SzemelyzetApp
             }
         }
 
+        public string Listazas
+        {
+           get
+           {
+                string nev = this.nev;
+                foreach (var i in beosztottak)
+                {
+                    nev += "\n"+i.Listazas;
+                }
+                return nev;
+           }
+        }
+        //Aktuális elemmel megvizsgálni az értéket és kombinálni a rekurzív értékkel
+        public int BeosztottakSzama
+        {
+            get
+            {
+                int letszam = 0;
+                if (beosztottak.Count > 0)
+                {
+                    foreach (var a in beosztottak)
+                    {
+                        letszam += a.BeosztottakSzama;
+                    }
+                }
+                else
+                {
+                    letszam = 1;
+                }
+
+                return letszam;
+            }
+        }
+
+       
+
+
     }
 }

@@ -20,19 +20,29 @@ namespace SzemelyzetApp
             fonok.Hozzaad(sz1);
             fonok.Hozzaad(sz2);
             sz2.Hozzaad(sz3);
+            
 
             Szemely keresett = szemelyzet.Keres("Jafar", new DateTime(856, 12, 5));
             //Console.WriteLine(keresett);
             //Console.WriteLine(szemelyzet.Letszam);
 
 
-             /* 
-             - Személyzet.Listázás() - konzolra kiírja a teljes személyzetet, soronként elválasztva 
-             - Személyzet.BeosztottakSzama: int(getter) - megszámolja, hogy hány olyan személy dolgozik, akinek nincs beosztottja
-             */
+            /* 
+            - Személyzet.Listázás() - konzolra kiírja a teljes személyzetet, soronként elválasztva 
+            - Személyzet.BeosztottakSzama: int(getter) - megszámolja, hogy hány olyan személy dolgozik, akinek nincs beosztottja
+            */
+
+            var listazas = fonok.Listazas;
+            Console.WriteLine("Személyzet:\n");
+            Console.WriteLine(listazas);
+            Console.WriteLine("\n");
 
 
 
+            var beosztottakSzama = fonok.BeosztottakSzama;
+            Console.WriteLine("Beosztottak száma:\n");
+            Console.WriteLine(beosztottakSzama);
+            Console.WriteLine("\n");
 
 
 

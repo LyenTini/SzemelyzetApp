@@ -10,7 +10,7 @@ namespace SzemelyzetApp
     {
 
         Szemely fonok;
-
+        
         public Szemelyzet(Szemely fonok)
         {
             this.fonok = fonok;
@@ -28,6 +28,17 @@ namespace SzemelyzetApp
             {
                 return fonok.Letszam;
             }
+        }
+
+        public string Listazas()
+        {
+            return fonok.Listazas;
+        }
+
+
+        public int BeosztottakSzama()
+        {
+            return fonok.BeosztottakSzama;
         }
     }
 }
